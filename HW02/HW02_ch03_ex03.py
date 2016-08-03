@@ -41,12 +41,38 @@
 # Body
 
 
+def line1(x):
+	print ("+" + "-" * x + "+" + "-" * x + "+")
+
+def line2(x):
+	print ("|" + " " * x + "|" + " " * x + "|")
+
+def do_twice(f,x):
+	f(x)
+	f(x)
+
+
+def do_four(f,x):
+	do_twice(f,x)
+	do_twice(f,x)
+
+
+def two_by_two():
+	line1(2)
+	do_twice(line2,2)
+	line1(2)
+	do_twice(line2,2)
+	line1(2)
+	
 
 
 
-
-
-
+def four_by_four():
+	line1(4)
+	do_four(line2,4)
+	line1(4)
+	do_four(line2,4)
+	line1(4)
 
 
 
@@ -61,7 +87,8 @@ def main():
     """
     print("Hello World!")
     
-
+    two_by_two()
+    four_by_four()
 
 
 if __name__ == "__main__":

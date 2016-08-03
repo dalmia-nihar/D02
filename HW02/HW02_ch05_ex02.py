@@ -21,13 +21,23 @@
 # Write your functions below:
 # Body
 
+def check_fermat(a,b,c,n):
+	if (n>2):
+		if(a**n + b**n == c**n):
+			print("Holy smokes, Fermat was wrong!")
+		else:
+			print("No, that doesn't work.")
+	else:
+		print("Please Enter a 'N' greater than 2")
 
 
 
-
-
-
-
+def check_fermat_ints():
+	a=int(input('Enter value for a?\n'))
+	b=int(input('Enter value for b?\n'))
+	c=int(input('Enter value for c?\n'))
+	n=int(input('Enter value for n?\n'))
+	check_fermat(a,b,c,n)
 
 # Write your functions above:
 ################################################################################
@@ -40,6 +50,8 @@ def main():
     check_fermat()
     """
     print("Hello World!")
+    check_fermat(2,3,4,5)
+    check_fermat_ints()
 
 
 

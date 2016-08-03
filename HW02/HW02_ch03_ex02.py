@@ -29,10 +29,19 @@
 # Write your functions below:
 # Body
 
+def do_twice(f,s):
+	f(s)
+	f(s)
 
 
+def print_twice(s):
+    print(s)
+    print(s)
 
 
+def do_four(f,s):
+	do_twice(f,s)
+	do_twice(f,s)
 
 
 # Write your functions above:
@@ -43,8 +52,8 @@ def main():
     do_four(print_twice, [some_value])
     """
     print("Hello World!")
-    
-
+    do_twice(print_twice,"Spam")
+    do_four(print_twice,"Do_Four_Spam")
 
 if __name__ == "__main__":
     main()
